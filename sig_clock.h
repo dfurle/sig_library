@@ -18,11 +18,11 @@ public:
   }
   double getTimeAsMillis() {
     gettimeofday(&time2, NULL);
-    return ((time2.tv_usec - time1.tv_usec) * 1e-3 + .1e-3 * (time2.tv_sec - time1.tv_sec));
+    return ((time2.tv_usec - time1.tv_usec) * 1e-3 + 1e+3 * (time2.tv_sec - time1.tv_sec));
   }
   double getTimeAsMicros() {
     gettimeofday(&time2, NULL);
-    return ((time2.tv_usec - time1.tv_usec) + 1e-6 * (time2.tv_sec - time1.tv_sec));
+    return ((time2.tv_usec - time1.tv_usec) + 1e+6 * (time2.tv_sec - time1.tv_sec));
   }
   /*
     prints two sig::Clocks and restarts the one passed into as parameter.
